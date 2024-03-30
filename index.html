@@ -92,7 +92,81 @@
 
             // Use $data as needed
             ?&gt;</code></pre>
-
+      </div>
+      <div class="overflow-hidden content-section" id="content-get-characters">
+        <h3>Laravel (Using Guzzle HTTP Client)</h3>
+        <pre><code>use GuzzleHttp\Client;
+          
+          $client = new Client();
+          $response = $client->request('GET', 'https://mubinsayed.github.io/All-India-Pincodes/pincodes.json');
+          
+          $data = json_decode($response->getBody(), true);
+          
+          // Use $data as needed
+          </code></pre>
+      </div>
+      <div class="overflow-hidden content-section" id="content-get-characters">
+        <h3>Java (Using HttpURLConnection)</h3>
+        <pre><code>import java.net.HttpURLConnection;
+          import java.net.URL;
+          import java.io.BufferedReader;
+          import java.io.InputStreamReader;
+          
+          public class PincodeFetcher {
+              public static void main(String[] args) {
+                  try {
+                      URL url = new URL("https://mubinsayed.github.io/All-India-Pincodes/pincodes.json");
+                      HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                      conn.setRequestMethod("GET");
+          
+                      BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                      String inputLine;
+                      StringBuffer response = new StringBuffer();
+          
+                      while ((inputLine = in.readLine()) != null) {
+                          response.append(inputLine);
+                      }
+          
+                      in.close();
+          
+                      // Now response.toString() contains the JSON data
+                      String jsonData = response.toString();
+          
+                      // Use jsonData as needed
+                  } catch (Exception e) {
+                      e.printStackTrace();
+                  }
+              }
+          }
+          </code></pre>
+      </div>
+      <div class="overflow-hidden content-section" id="content-get-characters">
+        <h3>Python (Using Requests library)</h3>
+        <pre><code>import requests
+          
+          url = 'https://mubinsayed.github.io/All-India-Pincodes/pincodes.json'
+          response = requests.get(url)
+          
+          data = response.json()
+          
+          // Use data as needed
+          </code></pre>
+      </div>
+      <div class="overflow-hidden content-section" id="content-get-characters">
+        <h3>JavaScript (Node.js, Using Axios library)</h3>
+        <pre><code>const axios = require('axios');
+          
+          const url = 'https://mubinsayed.github.io/All-India-Pincodes/pincodes.json';
+          
+          axios.get(url)
+            .then(response => {
+              const data = response.data;
+              // Use data as needed
+            })
+            .catch(error => {
+              console.error('Error fetching data:', error);
+            });
+          </code></pre>
       </div>
     </div>
   </div>
