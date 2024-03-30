@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>All India Pincodes JSON Documentation</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-    h1 {
-      color: #333;
-    }
-    code {
-      background-color: #f4f4f4;
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-  </style>
+
+  <meta name="description" content="">
+  <meta name="author" content="Mubin Sayed">
+
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/hightlightjs-dark.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 </head>
 <body>
   <h1>All India Pincodes JSON Documentation</h1>
@@ -26,7 +26,7 @@
   <h2>Accessing JSON Data</h2>
 
   <h3>PHP</h3>
-  <pre><code>&lt;?php
+  <pre><code class="bash">&lt;?php
 $url = 'https://mubinsayed.github.io/All-India-Pincodes/pincodes.json';
 $ch = curl_init($url);
 
