@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All India Pincodes JSON Documentation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>All India Pincodes JSON Documentation</h1>
+  
+  <h2>Accessing JSON Data</h2>
+
+  <h3>PHP</h3>
+  <pre><code>&lt;?php
+$url = 'https://mubinsayed.github.io/All-India-Pincodes/pincodes.json';
+$ch = curl_init($url);
+
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+$response = curl_exec($ch);
+
+if(curl_errno($ch)){
+    echo 'Curl error: ' . curl_error($ch);
+}
+
+curl_close($ch);
+
+// Now $response contains the JSON data
+$data = json_decode($response, true);
+
+// Use $data as needed
+?&gt;</code></pre>
+
+  <!-- Add other language examples here -->
+
+  <h2>Additional Resources</h2>
+  <ul>
+    <li><a href="https://mubinsayed.github.io/All-India-Pincodes/pincodes.json">Link to JSON File</a></li>
+    <li><a href="https://github.com/your-username/your-repo">GitHub Repository</a></li>
+  </ul>
+</body>
+</html>
